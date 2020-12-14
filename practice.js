@@ -54,11 +54,44 @@ describeUSA = describeCountry('usa' , 15 , 'washington' );
 describeJAPAN = describeCountry('japan' , 3 ,'tokyo');
 console.log(describeKorea,describeUSA,describeJAPAN);
 
-//part2-2
-const percentageOfWorld = function(population){
+//part2-2 Declaration
+function percentageOfWorld(population){ //Declaration은 시작을 function의 정의로 시작!
    return (population/7900) * 100
 } 
-oercentkorea = percentageOfWorld(500);
+percentOfKorea = percentageOfWorld(500);
+percentageOfUSA = percentageOfWorld(2000);
+percentageOfJapan = percentageOfWorld(1000);
+console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);
+
+//expression
+const percentageOfWorld2 = function (population){ //기본적으로 const로 함수를 정의함
+    return (population/7900) * 100
+} 
+
+
+const percentOfSwiss = percentageOfWorld2(300); 
+const percentOfEgypt = percentageOfWorld2(1350);
+const percentOfEngland = percentageOfWorld2(1035);
+ console.log(percentOfSwiss ,percentOfEgypt , percentOfEngland);
+
+ //Arrow
+const percentageOfWorld3 = population => (population/7900) * 100;
+const percentageOfyou = percentageOfWorld3(3000);
+console.log(percentageOfyou);
+
+//LECTURE: Functions Calling Other Functions
+function percentageOfIt(population){ //2개의 함수를 활용함!
+    return (population/7900) * 100;
+}
+
+function describePopulation(country , population) {
+    return country + 'has' + population + 'million people ,which is about ' + percentageOfIt + 'of the world';
+}
+percentOfKorea = percentageOfIt(500);
+percentageOfUSA = percentageOfIt(2000);
+percentageOfJapan = percentageOfIt(1000);
+console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);
+
 
 
 
