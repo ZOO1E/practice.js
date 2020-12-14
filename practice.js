@@ -1,3 +1,4 @@
+/*
 const country = 'korea';
 const continent = 'Asia';
 const population = '70';
@@ -42,7 +43,22 @@ if (numNeighbours === 1) { //cuz === accept 1 to string so we must use number fu
     console.log('More than 1 border in case');
 }else{
     console.log('No borders');
+} */
+//part2-1
+function describeCountry(country,population,capitalCity) {
+    return  country + 'has' + population + ' millions people and its capital city is' + capitalCity ;
 }
+
+describeKorea = describeCountry ('Korea' , 3 , 'seoul');
+describeUSA = describeCountry('usa' , 15 , 'washington' );
+describeJAPAN = describeCountry('japan' , 3 ,'tokyo');
+console.log(describeKorea,describeUSA,describeJAPAN);
+
+//part2-2
+const percentageOfWorld = function(population){
+   return (population/7900) * 100
+} 
+oercentkorea = percentageOfWorld(500);
 
 
 
