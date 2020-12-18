@@ -43,7 +43,7 @@ if (numNeighbours === 1) { //cuz === accept 1 to string so we must use number fu
     console.log('More than 1 border in case');
 }else{
     console.log('No borders');
-} */
+} 
 //part2-1
 function describeCountry(country,population,capitalCity) {
     return  country + 'has' + population + ' millions people and its capital city is' + capitalCity ;
@@ -90,10 +90,33 @@ function describePopulation(country , population) {
 percentOfKorea = percentageOfIt(500);
 percentageOfUSA = percentageOfIt(2000);
 percentageOfJapan = percentageOfIt(1000);
-console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);
+console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);*/
 
+// Introduction to Arrays
+const populations = [200,400,1200,35];
+console.log(populations.length === 4);
 
+function percentageOfWorld1 (a){
+    return (a/7900) * 100;
+}
 
+const percentages = [percentageOfWorld1(populations[0] ), percentageOfWorld1(populations[1] ), percentageOfWorld1(populations[2] ) ,percentageOfWorld1(populations [3])];
+console.log(percentages);
 
+//LECTURE: Basic Array Operations (Methods)
+const neighbours =['Seoul','Pusan','Namji' ,'chanhneung' ];
+neighbours.push ('Utopia');
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+console.log(neighbours.includes('Germany'))
 
+if(neighbours.includes('Germany')){
+    console.log('yes it is');
+}else{
+console.log('Probably not a central European country :D');
+}
+
+neighbours[3] = 'kimhae'; //neighbours [neighbours.indexOf('Seoul')] ='Republic of Sweden')
+console.log(neighbours);
 
