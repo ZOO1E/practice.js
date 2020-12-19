@@ -90,7 +90,7 @@ function describePopulation(country , population) {
 percentOfKorea = percentageOfIt(500);
 percentageOfUSA = percentageOfIt(2000);
 percentageOfJapan = percentageOfIt(1000);
-console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);*/
+console.log(percentOfKorea,percentageOfUSA,percentageOfJapan);
 
 // Introduction to Arrays
 const populations = [200,400,1200,35];
@@ -120,3 +120,51 @@ console.log('Probably not a central European country :D');
 neighbours[3] = 'kimhae'; //neighbours [neighbours.indexOf('Seoul')] ='Republic of Sweden')
 console.log(neighbours);
 
+
+
+//LECTURE: Introduction to Objects
+const myCountry ={
+country: 'Filand',
+capital : 'Helsinki',
+language : 'finnish',
+population : 6,
+neibours : ['newland','England' ,'greenland'],
+
+describe : function () { 
+    return console.log(this.describe);
+    } 
+};
+console.log()
+
+myCountry.population = 8;
+//myCountry['population'] = 4;
+console.log(myCountry.country +' has ' +
+myCountry.population + 
+' million ' + myCountry.language + 
+' speaking people ' + myCountry.neibours.length +
+' neibouring countries and a capital called ' + myCountry.capital ); //출력시 변수보다 선행하면 log에서 반영이 안된!
+console.log(myCountry);*/
+
+
+//object method
+const myCountry ={
+    country: 'Filand',
+    capital : 'Helsinki',
+    language : 'finnish',
+    population : 6,
+    neibours : ['newland','England' ,'greenland'],
+    
+    describe : function () { 
+        return myCountry.country +' has ' +
+        myCountry.population + 
+        ' million ' + myCountry.language + 
+        ' speaking people ' + myCountry.neibours.length +
+        ' neibouring countries and a capital called ' +
+         myCountry.capital ; 
+        },
+        checkIsland : function(){
+            return (myCountry.Island ? 'a': 'no');
+        }  
+    };
+
+    console.log(myCountry.checkIsland());
