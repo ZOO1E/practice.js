@@ -143,7 +143,7 @@ myCountry.population +
 ' million ' + myCountry.language + 
 ' speaking people ' + myCountry.neibours.length +
 ' neibouring countries and a capital called ' + myCountry.capital ); //출력시 변수보다 선행하면 log에서 반영이 안된!
-console.log(myCountry);*/
+console.log(myCountry);
 
 
 //object method
@@ -168,3 +168,55 @@ const myCountry ={
     };
 
     console.log(myCountry.checkIsland());
+
+    //Iteration The Loop 
+    for(i=1 ; i<51 ; i++){
+        console.log('Voter number' + i + 'is currently voting');
+    }*/
+
+    //Loop Arrays , Breaking and Continuing
+//     const populations =[ 200 ,400 ,1200 ,35 ];
+//     const percentages2 =[];
+//     for(i=0;i<4;i++) {
+//         const perc = percentageOfWorld1(populations[i]);
+//         percentages2.push(perc);
+//     };
+
+    
+//     function percentageOfWorld1 (a){
+//         return (a/7900) * 100;
+//     }
+//     console.log(percentages2);
+
+    
+
+// function percentageOfWorld1 (a){
+//     return (a/7900) * 100;
+// }
+// const percentages=[percentageOfWorld1(populations[0]),percentageOfWorld1(populations[1]),percentageOfWorld1(populations[2]),percentageOfWorld1(populations[3])];
+// console.log(percentages);
+
+//Looping Backwards and Loops in Loops
+//  const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'],
+// ['Norway', 'Sweden','Russia']];
+
+// for(i=0; i<listOfNeighbours.length ; i++ ){
+// for(y=0 ; y < listOfNeighbours[i].length ; y++){
+//  console.log('Neibour:' + listOfNeighbours[i][y]);
+//     }
+// };
+
+//the while Loop
+function percentageOfWorld1 (a){
+         return (a/7900) * 100;
+     }
+let i=0;
+const populations =[ 200 ,400 ,1200 ,35 ];
+     const percentages3 =[];
+     while(i<4) {
+         const perc = percentageOfWorld1(populations[i]);
+         percentages3.push(perc);
+        i++;
+        };
+console.log(percentages3);
+
